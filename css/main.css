@@ -1737,6 +1737,7 @@ pre .javascript .function {
   max-width: 96px;
   height: auto;
   border: 2px solid #333;
+  border-radius: 100px;
 }
 .site-author-name {
   margin: 5px 0 0;
@@ -1818,7 +1819,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #78ff70;
+  background: #bf2bff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2899,4 +2900,22 @@ hr {
     width: auto;
     text-align: center;
   }
+}
+body {
+  background: url("https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fup.enterdesk.com%2Fedpic_source%2F67%2Fbc%2Fa3%2F67bca3c326339f304d9c4ea51c2009d1.jpg&refer=http%3A%2F%2Fup.enterdesk.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1656346128&t=faa36140dde643bb2dd9e8098c46fc15");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-size: cover;
+  width: 100%;
+}
+.main-inner {
+  margin-top: 37px;
+  padding: 3.6% 3.6% 3.6% 3.6%;
+  background: #fff;
+  opacity: 0.8;
+  min-height: 500px;
+}
+.comments {
+  background: rgba(255,255,255,0.8) none repeat scroll !important;
 }

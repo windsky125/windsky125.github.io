@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello World</title>
+    <url>/2022/05/29/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Introduce</title>
+    <url>/2020/01/22/intrduce/</url>
+    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>欢迎来到我的博客，虽然目前几乎什么都没有。这个博客基于hexo和gitee搭建（本人目前还是不会传到github….）其实博客的计划实际上很早就有了…直到假期才有了闲暇时间来实施。整个过程花了将近一天半的时间，进了不少的坑，不得不要感谢CSDN上面大佬的教程。在以后可能会加上评论系统。</p>
+<p>本人是纯自学，完善的地方还有不少地方….慢慢来吧。</p>
+<p>晚上又补充了关于和搜索，看了一下虽然手机上可以自动播放BGM，但侧边栏还是打不开，看看后期能不能优化了（估计还得多学一学css）</p>
+<h1 id="小插曲"><a href="#小插曲" class="headerlink" title="小插曲"></a>小插曲</h1><h2 id="npm换源问题"><a href="#npm换源问题" class="headerlink" title="npm换源问题"></a>npm换源问题</h2><p>之前用npm的下载速度是真的慢，输入了：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org/</span><br><span class="line">npm config list</span><br></pre></td></tr></table></figure>
+
+<p>确认过了修改源成功后，依旧是龟速，不知道为什么…又想到了安装cnpm，但是速度太让人崩溃了…<br>最后的解决方法是换成：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.cnpmjs.org/</span><br></pre></td></tr></table></figure>
+<p>然后就可以了。</p>
+<h2 id="电脑端和手机端博客文字显示不一致"><a href="#电脑端和手机端博客文字显示不一致" class="headerlink" title="电脑端和手机端博客文字显示不一致"></a>电脑端和手机端博客文字显示不一致</h2><p>刚刚做好博客之后发现手机端文字很窄，两侧留白很大，电脑上显示的倒是正常，原因是我选用了next.mist主题后，换了背景图片。之后需要在文字页面增加一个半透明的底色。起初是这样安排的：</p>
+<p>在blog&#x2F;themes&#x2F;next&#x2F;source&#x2F;css_custom&#x2F;custom.styl中添加以下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">.main-inner &#123; </span><br><span class="line">    margin-top: 37px;</span><br><span class="line">    padding: 50px 50px 50px 50px;</span><br><span class="line">    background: <span class="comment">#fff;</span></span><br><span class="line">    opacity: 0.9;</span><br><span class="line">    min-height: 500px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>hexo博客分辨平台是根据分辨率来区分的，手机上的显示时用50px留得过多了，为了两方面都适配，这里采用百分比的方式，上面的一段修改成：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">.main-inner &#123; </span><br><span class="line">    margin-top: 37px;</span><br><span class="line">    padding: 3.6% 3.6% 3.6% 3.6%;</span><br><span class="line">    background: <span class="comment">#fff;</span></span><br><span class="line">    opacity: 0.9;</span><br><span class="line">    min-height: 500px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这下在手机上看起来就舒服了</p>
+<h2 id="评论系统的添加"><a href="#评论系统的添加" class="headerlink" title="评论系统的添加"></a>评论系统的添加</h2><p>这个过程比想象中还要简单，权衡再三后采用了valine，主要是评论时不用注册，而且next主题中已经有了内置。可以参考这一篇来尝试：<a href="https://blog.csdn.net/blue_zy/article/details/79071414">https://blog.csdn.net/blue_zy/article/details/79071414</a></p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>还想说的…新型冠状病毒整的有点不敢出门，大家出门记得戴好口罩。<br>下面的内容是初始页面。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>日语学习</title>
+    <url>/2020/02/21/%E6%97%A5%E8%AF%AD%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<h2 id="动机"><a href="#动机" class="headerlink" title="动机"></a>动机</h2><p>其实也是出于个人爱好，原来自己的英语也一般般，学习动力没有多少。到了中学之后，渐渐地对动漫有了兴趣，后来接触了轻小说后，也是一发不可收拾了。这是前话了,一个直接的原因是： 这要从一只蝙蝠说起…..总之，呆在家里，空闲时间那么多，总的要去找一点事情做，何尝不试一试呢？说不定我有朝一日可以自己啃生肉（幻想）。然后就开始了这个比想象中痛苦的过程。</p>
+<h2 id="五十音"><a href="#五十音" class="headerlink" title="五十音"></a>五十音</h2><p>50音是日语入门的一个基础。首先日语是有三个部分组成的： 1.平假名  2.片假名  3.汉字</p>
+<p>每一个平假名有着一一对应的片假名，读音是惟一的;</p>
+<p>而汉字可能有着一种或多种读音，可以用平假名来把它的读音表示出来（这个时候平假名发挥了类似与我们拼音一样的作用）;</p>
+<p>50音图是包括了50个平假名和相对应的50个片假名，按照罗马字的顺序排部的一个表，10行5列，把基本的清音都标注出来了。</p>
+<p>但日语发音除了50音之外，还要包括浊音和半浊音，拗音。实际上要学会所有的发音需要一段时间，时间长短因人而异。</p>
+<p>这一阶段的学习我是在B站上寻找了50音的视频教程，刷完了十几节课后有了一个基本的记忆。平假名在日文中用的很常见，会发现记住平假名是很简单的，片假名则很容易忘，遇到了也很难立刻想到它的读音。</p>
+<p>总之，学会了日语发音，日语学习可以说是正式地迈进了大门。</p>
+<h2 id="学习课文"><a href="#学习课文" class="headerlink" title="学习课文"></a>学习课文</h2><p>好啦，如果50音平假名你已经记忆的很熟悉了，如果片假名一直记不住也没有关系，以后背单词中自然而然地就能记住了。这个时候就可以拿出教科书了。（这个时候我错误地以为后面都是康庄大道了）</p>
+<p>我选择了《新标日》，这也可能是大多数人的选择。学习每一篇课文的方法类似与英语：先把课后的单词都学会了，之后学习句型和语法，最后接触课文内容，初级上下册好像都是按着这个流程来着的。</p>
+<p>对于我们中国人而言，汉语和日语之间的相似度的确可以给我们不少便利，日文有不少汉字和中文的汉字是同样的或相似的意思。两种语言的语法也有着很多共同点,理解日文对于我们还是友好的。</p>
+<p>每一节课的单词都有不少，这个看个人能力，那个时候我是一次背不会的，我就选择先拿下比较常用的词，多读几遍课文，体会一下句子，至于其余的单词，就留给以后的时间了…..希望我别忘了它们。</p>
+<p>任何的学习都是一个由浅入深的过程，日语学习同样如此。开始是学习简单的问候，日常交流，慢慢中间就会夹杂着句型和语法，但都是有迹可寻，按着框架来就可以。记忆数词会很头疼，计数，时间，日期等等用的都有着区别。这个不过一段时间是记不住的啊….</p>
+<p>这一段后续也会更新…..看我能学多少了</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>总之，如果说日语好上手，那的确是肯定的，同英语相比，日语学习的趣味性更多，有的人高考选择了日语，也是一个不错的选择（何况可以顺便努努力把N2拿下），但专业可能有点限制。但要学好任何一门语言，都要经历不少困难，学英语不少觉得越学越简单，但是日语绝对是越学越难的，伴随着自己了解的越多，这个体会就愈来越真实。</p>
+<p>同时也不能在选择一门语言的同时，放弃另一门语言，甚至你还要多多关照一下。对，我这里说的是英语，不单是因为英语有更高的实用性，还是因为日语有点“天克”英语，学日语总要学不少的舶来语，很多词实际上就是日式发音的英语单词，慢慢的让你不会说英语…..英语还是要多讲一讲，别把读音忘了。</p>
+<p>以上是一个本人的体会，自己也没有学很多，所以起不到太多的参考价值。这段时间一直在感慨难，但是，请不要对它心怀畏惧，如果你怀揣梦想，内心坚定，充满对什么什么的热爱甚至是信仰，那学日语绝对不是一件会让你后悔的事情。而你会收获一段痛并快乐着的记忆。</p>
+<p>总之，加油，奥利给，干它就完了！</p>
+]]></content>
+  </entry>
+</search>
